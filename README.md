@@ -65,9 +65,9 @@ Git — это программа для контроля версий созд�
 
 ```mermaid
 graph LR;
-  File created (status is untracked)  --> Command git add --> Status is "staged";
-  File tracked with Git --> File changed --> Status is "modified" --> File added with command "git add" --> Status is "staged"; 
-  File tracked with Git --> Commit file with command "git commit" --> Status is commited;  
+  untracked  -- "git add" --> staged;
+  staged -- "file changed" --> modified -- "git add" --> staged; 
+  staged -- "git commit" --> tracked/commited;  
 ```
 
 
